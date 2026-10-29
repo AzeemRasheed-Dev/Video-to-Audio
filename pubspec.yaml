@@ -1,0 +1,69 @@
+name: my_app
+description: "Video to Audio Converter Flutter Application."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Routing & Navigation
+  go_router: ^17.5.0
+
+  # Media & File Handling
+  file_picker: ^8.1.7
+  path_provider: ^2.1.6
+  open_file: ^4.0.0
+  share_plus: ^12.0.2
+  image_picker: ^1.1.2
+
+  # Audio Conversion Engine
+  ffmpeg_kit_flutter_new: ^4.6.2
+
+  # Icons & Media
+  cupertino_icons: ^1.0.8
+  google_fonts: ^8.2.1
+  video_player: ^2.11.1
+  ringtone_set_plus: ^0.0.2+2
+
+  # 👉 Google Ads Integration (Bug 18)
+  google_mobile_ads: ^5.2.0
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # 👉 Native Splash Package
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets Declaration (Images & Icons)
+  assets:
+    - assets/images/
+    - assets/icons/
+
+# ==============================================================
+# NATIVE SPLASH SCREEN CONFIGURATION (White Screen Flash Fix)
+# ==============================================================
+flutter_native_splash:
+  # Light Theme Background (Clean Cream)
+  color: "#F8F9F5"
+  # Dark Theme Background (Deep Obsidian Green)
+  color_dark: "#141C19"
+
+  # Android 12+ Support
+  android_12:
+    color: "#F8F9F5"
+    color_dark: "#141C19"
+
+  web: false
